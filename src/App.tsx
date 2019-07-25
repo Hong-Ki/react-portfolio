@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styles from "./styles/layout.module.scss";
+import classNames from "classnames/bind";
+import PageConatainer from "./containers/PageContainer";
+import { FloatingButton } from "./components/Button/Button";
+import ModalContainer from "./containers/ModalContainer";
+const cx = classNames.bind(styles);
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={cx("wrapper")}>
+      <PageConatainer />
+      <FloatingButton>a</FloatingButton>
+      <ModalContainer />
     </div>
   );
-}
+};
 
 export default App;

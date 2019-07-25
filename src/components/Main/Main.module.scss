@@ -1,0 +1,92 @@
+@import "../../styles/utils";
+
+.back {
+  @include flex-box();
+  position: absolute;
+  opacity: 0.02;
+  font-size: 45vh;
+  font-weight: 800;
+
+  z-index: z-index("background");
+}
+
+.box {
+  @include flex-box();
+  font-size: 90px;
+}
+
+.neon {
+  @include neon();
+  font-weight: 500;
+
+  animation-delay: 3s;
+}
+
+.big {
+  font-size: 70px;
+}
+.left {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.blur {
+  @include clip-mask();
+  opacity: 0.2;
+  filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  &::after {
+    @include mask();
+  }
+}
+
+.top {
+  @include flex-box($full, auto, row);
+  flex-grow: 1;
+  z-index: z-index("contents");
+  user-select: none;
+  & > .left {
+    margin-bottom: 45px;
+    & span {
+      margin-top: 0.3em;
+      &:nth-child(1) {
+        &::after {
+          animation-delay: 0.5s;
+        }
+        animation-delay: 0.5s;
+      }
+      &:nth-child(2) {
+        &::after {
+          animation-delay: 1s;
+        }
+        animation-delay: 1s;
+      }
+    }
+  }
+  & > .right {
+    margin-left: 1em;
+    font-size: 45px;
+  }
+}
+
+.bottom {
+  @include flex-box(40%, auto, column, flex-start, flex-start);
+  z-index: z-index("contents");
+  user-select: none;
+  font-size: 80px;
+  flex-grow: 1;
+  & span {
+    margin-top: 0.2em;
+    &:nth-child(1) {
+      &::after {
+        animation-delay: 1.5s;
+      }
+      animation-delay: 1.5s;
+    }
+  }
+}

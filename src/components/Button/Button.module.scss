@@ -1,0 +1,69 @@
+@import "../../styles/utils";
+
+.floating {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+
+  z-index: z-index("floatting");
+
+  .bar,
+  .bar::before,
+  .bar::after {
+    width: 100%;
+    height: 3px;
+    background: white;
+  }
+
+  &:hover {
+    .bar {
+      background: #ffffff00;
+    }
+    div.bar:after {
+      top: 0;
+      transform: rotate(45deg);
+      transition: top 0.3s ease, transform 0.3s 0.3s ease;
+    }
+
+    div.bar:before {
+      bottom: 0;
+      transform: rotate(-45deg);
+      transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+    }
+  }
+}
+
+div.bar {
+  position: relative;
+  transform: translateY(9px);
+  transition: all 0.3s 0.3s ease;
+}
+
+div.bar:before {
+  content: "";
+  position: absolute;
+  bottom: 9px;
+  transition: bottom 0.3s 0.3s ease, transform 0.3s ease;
+}
+
+div.bar:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  transition: top 0.3s 0.3s ease, transform 0.3s ease;
+}
+
+div.bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 0.3s ease, transform 0.3s 0.3s ease;
+}
+
+div.bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
+}

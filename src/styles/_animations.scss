@@ -1,0 +1,87 @@
+/* neon */
+$neon-color: #87ff00;
+$neon-text-shadow-on: 0 0 10px #fff, 0 0 15px#fff, 0 0 20px $neon-color,
+  0 0 25px $neon-color, 0 0 40px $neon-color;
+$neon-text-shadow-off: 0 0 15px #4070003f;
+$neon-text-shadow-final: 0 0 5px #fff, 0 0 10px $neon-color,
+  0 0 20px $neon-color;
+
+@keyframes neon_blank {
+  0% {
+    opacity: 0.3;
+    text-shadow: $neon-text-shadow-off;
+  }
+  30%,
+  80% {
+    opacity: 1;
+    color: white;
+    text-shadow: $neon-text-shadow-on;
+  }
+  35%,
+  45%,
+  55%,
+  65%,
+  75% {
+    opacity: 0.3;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-off;
+  }
+  40%,
+  50%,
+  60% {
+    opacity: 0.8;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-on;
+  }
+  100% {
+    opacity: 1;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-final;
+  }
+}
+
+@mixin neon($duration: 1.5s, $delay: 0s) {
+  font-family: "Neon_R";
+  opacity: 0.3;
+  color: $neon-color;
+  text-shadow: $neon-text-shadow-off;
+  font-weight: bold;
+  animation: neon_blank $duration forwards ease-out;
+  animation-delay: $delay;
+}
+
+@keyframes mask-after {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes clip {
+  from {
+    opacity: 0.2;
+    //clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@mixin clip-mask($duration: 1.5s) {
+  animation: clip $duration cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+@mixin mask($duration: 1.5s, $color: white) {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: mask-after $duration cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transform: translateX(-101%);
+}
