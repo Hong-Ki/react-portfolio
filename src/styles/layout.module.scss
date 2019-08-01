@@ -1,7 +1,0 @@
-@import "./utils";
-
-:global {
-  .wrapper {
-    @include flex-box();
-  }
-}
