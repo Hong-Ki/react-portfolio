@@ -1,1 +1,73 @@
-@import "../../styles/utils";
+@import '../../styles/utils';
+
+@keyframes turn-off-neon {
+  from {
+    opacity: 0.3;
+    color: black;
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    color: $neon-off-color;
+    text-shadow: $neon-text-shadow-off;
+  }
+}
+
+.show ul,
+.hide ul {
+  font-family: Neon_R;
+  font-size: 7vh;
+
+  opacity: 0;
+
+  margin-right: auto;
+  margin-left: 20vw;
+
+  z-index: inherit;
+
+  & li {
+    cursor: pointer;
+  }
+  & li:hover {
+    @include neon(1s);
+  }
+}
+
+@keyframes menu {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: $oc-gray-9;
+  }
+}
+
+.show {
+  top: 0;
+  background-color: black;
+
+  & ul {
+    animation: turn-off-neon 0.3s 0.3s forwards;
+  }
+
+  animation: menu 0.5s 0.3s forwards;
+}
+
+@keyframes dark {
+  from {
+    opacity: 5;
+    background-color: black;
+  }
+  to {
+    opacity: 0;
+    background-color: black;
+  }
+}
+
+.hide {
+  top: -110%;
+
+  animation: dark 0.5s;
+  transition-delay: 0.5s;
+}
