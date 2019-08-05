@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28abbc971899ba5606d9a4f3d3161eff",
+    "revision": "111c69bde7bcb622c988426a80818f0e",
     "url": "/react-portfolio/index.html"
   },
   {
-    "revision": "d613346a8739a8824374",
-    "url": "/react-portfolio/static/css/main.ea0451c6.chunk.css"
+    "revision": "cd309c1ac4be9b55593d",
+    "url": "/react-portfolio/static/css/main.1291fd1a.chunk.css"
   },
   {
-    "revision": "de52dc4ca9b8a32eaca8",
-    "url": "/react-portfolio/static/js/2.3a574b9a.chunk.js"
+    "revision": "4788165e5c580c88b259",
+    "url": "/react-portfolio/static/js/2.8e66f37d.chunk.js"
   },
   {
-    "revision": "d613346a8739a8824374",
-    "url": "/react-portfolio/static/js/main.f0fd7bc5.chunk.js"
+    "revision": "cd309c1ac4be9b55593d",
+    "url": "/react-portfolio/static/js/main.b603fed9.chunk.js"
   },
   {
     "revision": "94872cf7e81768d148a3",
@@ -28,6 +28,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portfolio/static/media/css.606ea0c8.svg"
   },
   {
+    "revision": "104572c28e3cf80fdfc3e0157efaf0a9",
+    "url": "/react-portfolio/static/media/free-app-bot.104572c2.png"
+  },
+  {
     "revision": "873649e2067578074907c23bc3b8864a",
     "url": "/react-portfolio/static/media/java.873649e2.svg"
   },
@@ -38,6 +42,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6d3c2e50a6ebd417f6a993950dc162a5",
     "url": "/react-portfolio/static/media/left-arrow.6d3c2e50.svg"
+  },
+  {
+    "revision": "bb58371174aca355e486074c959769f8",
+    "url": "/react-portfolio/static/media/link.bb583711.svg"
+  },
+  {
+    "revision": "fba7016414e32df95b94d45cb3968b6c",
+    "url": "/react-portfolio/static/media/placefinder.fba70164.png"
   },
   {
     "revision": "df98a55a8c326804a215312b3694e2aa",
@@ -56,7 +68,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portfolio/static/media/spring.26532e77.svg"
   },
   {
+    "revision": "bbfb910d2bc1381a0728ea49b1b2b681",
+    "url": "/react-portfolio/static/media/todolist.bbfb910d.png"
+  },
+  {
     "revision": "ca269c4a366a593a835566ea80368032",
     "url": "/react-portfolio/static/media/typescriptlang.ca269c4a.svg"
+  },
+  {
+    "revision": "4797891114f46873531ea9cc1e4b270b",
+    "url": "/react-portfolio/static/media/wordbook.47978911.png"
   }
 ]);
