@@ -49,6 +49,29 @@ $neon-text-shadow-final: 0 0 5px #fff, 0 0 10px $neon-color,
   }
 }
 
+@keyframes neon-border {
+  0%,
+  30%,
+  60%,
+  85% {
+    opacity: 0.8;
+    border: 3px solid $neon-off-color;
+    box-shadow: 0 0 2px 1px $neon-off-color, inset 0 0 2px 1px $neon-off-color;
+  }
+  90% {
+    opacity: 0.8;
+    border: 3px solid white;
+  }
+  15%,
+  45%,
+  75%,
+  100% {
+    box-shadow: 0 0 2px 1px $neon-color, inset 0 0 2px 1px $neon-color;
+    border: 3px solid $neon-color;
+    opacity: 1;
+  }
+}
+
 @mixin neon($duration: 1.5s, $delay: 0s, $fill-mode: forwards) {
   font-family: 'Neon_R';
   color: $neon-off-color;
@@ -104,5 +127,27 @@ $neon-text-shadow-final: 0 0 5px #fff, 0 0 10px $neon-color,
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fade-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(1em);
+  }
+}
+
+/* pulse */
+
+@keyframes pulse {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
   }
 }
