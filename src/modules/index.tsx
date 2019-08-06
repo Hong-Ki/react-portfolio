@@ -1,10 +1,10 @@
-import { combineReducers } from "redux";
-import modal, { ModalState } from "./reducers/modal";
-import pages, { PagesState } from "./reducers/pages";
+import { combineReducers } from 'redux';
+import modal, { ModalState } from './reducers/modal';
+import pages, { PagesState } from './reducers/pages';
 
 export default combineReducers({
   modal,
-  pages
+  pages,
 });
 
 export interface StoreState {
