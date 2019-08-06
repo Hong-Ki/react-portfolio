@@ -10,7 +10,14 @@ interface State {
 }
 
 const initialStateRecord = Record<State>({
-  menus: List(['HOME', 'ABOUT ME', 'TEST']),
+  menus: List([
+    'HOME',
+    'ABOUT ME',
+    'PROJECTS-CAREER',
+    'PROJECTS-PERSNAL',
+    'CONTACT',
+    'THANKS',
+  ]),
   previous: '',
   current: 'HOME',
   next: 'ABOUT ME',
@@ -25,6 +32,11 @@ export default handleActions<PagesState, any>(
       const index = state
         .get('menus')
         .findIndex(menu => menu === action.payload);
+
+      if (index < 0 || index > state.get('menus').size - 1) {
+        return state;
+      }
+
       return state
         .set('current', action.payload)
         .set('previous', index === 0 ? '' : state.getIn(['menus', index - 1]))
