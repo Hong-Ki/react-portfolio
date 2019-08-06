@@ -1,0 +1,35 @@
+@import '../../styles/utils';
+
+@keyframes back-text {
+  from {
+    fill: $oc-gray-2;
+  }
+  to {
+    fill: white;
+    filter: blur(5px);
+  }
+}
+
+.back {
+  @include flex-box($full, 85vh);
+  position: absolute;
+  opacity: 0.03;
+  font-weight: 500;
+  fill: black;
+  filter: blur(0px);
+  user-select: none;
+
+  animation: back-text 2s forwards;
+
+  & svg {
+    flex-grow: 1;
+    line-height: 0;
+  }
+
+  text {
+    font-family: Eoe_Zno_EB;
+    font-weight: 800;
+  }
+
+  z-index: z-index('background') !important;
+}

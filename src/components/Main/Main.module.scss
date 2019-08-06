@@ -1,0 +1,67 @@
+@import "../../styles/utils";
+
+.box {
+  @include flex-box();
+  font-size: 90px;
+}
+
+.neon {
+  @include neon();
+  font-weight: 500;
+
+  animation-delay: 2s;
+}
+
+.big {
+  font-size: 70px;
+}
+
+.left {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.blur {
+  @include clip-mask();
+  opacity: 0.1;
+  filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  &::after {
+    @include mask();
+    animation-delay: 0.5s;
+  }
+
+  animation-delay: 0.5s;
+}
+
+.top {
+  @include flex-box($full, 50%, row);
+  flex-grow: 1;
+  z-index: z-index("contents");
+  user-select: none;
+  & > .left {
+    margin-bottom: 0.45em;
+    & span {
+      margin-top: 0.3em;
+    }
+  }
+  & > .right {
+    margin-left: 1em;
+    font-size: 45px;
+  }
+}
+
+.bottom {
+  @include flex-box(40%, 50%, column, flex-start, flex-start);
+  z-index: z-index("contents");
+  user-select: none;
+  flex-grow: 1;
+  & span {
+    margin-top: 0.2em;
+  }
+}

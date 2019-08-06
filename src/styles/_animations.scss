@@ -1,0 +1,108 @@
+/* neon */
+$neon-color: #87ff00;
+$neon-off-color: #539c00;
+$neon-text-shadow-on: 0 0 10px #fff, 0 0 15px#fff, 0 0 20px $neon-color,
+  0 0 25px $neon-color, 0 0 40px $neon-color;
+$neon-text-shadow-off: 0 0 15px $neon-off-color;
+$neon-text-shadow-final: 0 0 5px #fff, 0 0 10px $neon-color,
+  0 0 20px $neon-color;
+
+@keyframes neon-once {
+  50% {
+    opacity: 1;
+    fill: $neon-color;
+    filter: drop-shadow(0 0 10px $neon-off-color);
+  }
+}
+
+@keyframes neon_on {
+  0% {
+    opacity: 0.3;
+    text-shadow: $neon-text-shadow-off;
+  }
+  30%,
+  80% {
+    opacity: 1;
+    color: white;
+    text-shadow: $neon-text-shadow-on;
+  }
+  35%,
+  45%,
+  55%,
+  65%,
+  75% {
+    opacity: 0.3;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-off;
+  }
+  40%,
+  50%,
+  60% {
+    opacity: 0.8;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-on;
+  }
+  100% {
+    opacity: 1;
+    color: $neon-color;
+    text-shadow: $neon-text-shadow-final;
+  }
+}
+
+@mixin neon($duration: 1.5s, $delay: 0s, $fill-mode: forwards) {
+  font-family: 'Neon_R';
+  color: $neon-off-color;
+
+  text-shadow: $neon-text-shadow-off;
+  font-weight: bold;
+  animation: neon_on $duration $fill-mode ease-out $delay;
+}
+
+/* mask */
+@keyframes mask-after {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes clip {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@mixin clip-mask($color: white, $duration: 1.5s) {
+  color: $color;
+  animation: clip $duration cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+@mixin mask($color: white, $duration: 1.5s) {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: $color;
+  animation: mask-after $duration cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transform: translateX(-101%);
+}
+
+/* fade-in */
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
