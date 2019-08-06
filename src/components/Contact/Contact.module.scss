@@ -1,0 +1,41 @@
+@import '../../styles/utils';
+
+.contents {
+  @include flex-box(auto, auto, row);
+
+  margin-top: 0.3em;
+}
+
+.title {
+  @include neon(1.3s, 0.5s, none);
+  color: $neon-color;
+  text-shadow: 0 0 10px $neon-color;
+  font-size: 1.6em;
+  @include media('<large') {
+    font-size: 1.2em;
+  }
+
+  margin-right: 0.5em;
+}
+
+.value {
+  font-size: 1.5em;
+  @include media('<large') {
+    font-size: 1.1em;
+  }
+}
+
+.ester_egg {
+  font-size: 3em;
+  position: absolute;
+
+  bottom: 10%;
+  right: 10%;
+
+  opacity: 0;
+
+  &:hover {
+    @include neon();
+    font-weight: 500;
+  }
+}
