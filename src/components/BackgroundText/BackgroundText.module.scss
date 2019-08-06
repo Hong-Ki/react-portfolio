@@ -1,27 +1,18 @@
 @import '../../styles/utils';
 
-@keyframes back-text {
-  from {
-    fill: $oc-gray-2;
-  }
-  to {
-    fill: white;
-    filter: blur(5px);
-  }
-}
-
 .back {
-  @include flex-box($full, 85vh);
+  @include flex-box();
   position: absolute;
+  top: 0;
   opacity: 0.03;
+  font-size: 1.1em;
   font-weight: 500;
-  fill: black;
-  filter: blur(0px);
+  fill: white;
+  filter: blur(3px);
   user-select: none;
 
-  animation: back-text 2s forwards;
-
   & svg {
+    width: 90vw;
     flex-grow: 1;
     line-height: 0;
   }
