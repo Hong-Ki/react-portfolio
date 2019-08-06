@@ -11,7 +11,6 @@ import Menu from '../components/Menu/Menu';
 
 interface Props {
   isVisible: boolean;
-  isRender: boolean;
   menus: List<string>;
   currentMenu: string;
   ModalActions: typeof modalActions;
@@ -19,28 +18,11 @@ interface Props {
 }
 
 class ModalContainer extends React.Component<Props> {
-  componentDidUpdate(prevProps: Props) {
-    const { isVisible: prevIsVisible, isRender: prevIsRender } = prevProps;
-    const { isVisible, isRender, ModalActions } = this.props;
-    if (prevIsVisible && !isVisible) {
-      ModalActions.toggleIsRender();
-    }
-
-    if (!prevIsRender && isRender) {
-      ModalActions.toggleVisible();
-    }
-  }
-
   onClick = () => {
     const {
-      ModalActions: { toggleIsRender, toggleVisible },
-      isRender,
+      ModalActions: { toggleVisible },
     } = this.props;
-    if (isRender) {
-      toggleVisible();
-    } else {
-      toggleIsRender();
-    }
+    toggleVisible();
   };
 
   onSeletcMenu = (menu: string) => {
@@ -50,12 +32,17 @@ class ModalContainer extends React.Component<Props> {
   };
 
   render() {
-    const { isVisible, isRender, menus } = this.props;
+    const { isVisible, menus, currentMenu } = this.props;
     const { onClick, onSeletcMenu } = this;
     return (
       <>
         <FloatingButton onClick={onClick} isVisible={isVisible} />
-        <Menu menus={menus} isVisble={isVisible} onSelectMenu={onSeletcMenu} />
+        <Menu
+          menus={menus}
+          isVisble={isVisible}
+          onSelectMenu={onSeletcMenu}
+          currentMenu={currentMenu}
+        />
       </>
     );
   }
@@ -64,7 +51,6 @@ class ModalContainer extends React.Component<Props> {
 export default connect(
   ({ modal, pages }: StoreState) => ({
     isVisible: modal.get('isVisible'),
-    isRender: modal.get('isRender'),
     menus: pages.get('menus'),
     currentMenu: pages.get('current'),
   }),
