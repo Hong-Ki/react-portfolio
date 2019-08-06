@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { FC } from 'react';
 import PageConatainer from './containers/PageContainer';
 import ModalContainer from './containers/ModalContainer';
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <>
       <PageConatainer />
