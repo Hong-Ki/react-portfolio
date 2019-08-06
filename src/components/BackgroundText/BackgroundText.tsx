@@ -16,9 +16,16 @@ const BackgroundText: SFC<Props> = ({ texts = [] }) => {
       length = val.length;
     }
   }
+
   const elements = texts.map(text => (
-    <svg key={index++} xmlns="http://www.w3.org/2000/svg" viewBox={'0 0 1 31'}>
-      <text y={'70%'} textLength={length * length * 4} textAnchor={'middle'}>
+    <svg
+      key={index++}
+      width={600}
+      height={400}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={'0 -5 60 50'}
+    >
+      <text y={30} x={30} textAnchor={'middle'}>
         {text}
       </text>
     </svg>
