@@ -1,4 +1,4 @@
-import { handleActions, Action } from 'redux-actions';
+import { handleActions } from 'redux-actions';
 import { Record } from 'immutable';
 import { TOGGLE_VISIBLE, TOGGLE_IS_RENDER } from '../actions/modal';
 
