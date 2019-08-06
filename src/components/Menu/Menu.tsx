@@ -9,10 +9,11 @@ const cx = classNames.bind(styles);
 interface Props {
   menus: List<string>;
   isVisble: boolean;
+  currentMenu: string;
   onSelectMenu(menu: string): void;
 }
 
-const Menu: SFC<Props> = ({ menus, isVisble, onSelectMenu }) => {
+const Menu: SFC<Props> = ({ menus, isVisble, onSelectMenu, currentMenu }) => {
   const onClick = (e: React.MouseEvent<HTMLLIElement>) => {
     const {
       currentTarget: { textContent },
@@ -22,7 +23,11 @@ const Menu: SFC<Props> = ({ menus, isVisble, onSelectMenu }) => {
     }
   };
   const elements = menus.map(menu => (
-    <li key={menu} onClick={onClick}>
+    <li
+      className={cx({ active: currentMenu === menu })}
+      key={menu}
+      onClick={onClick}
+    >
       {menu}
     </li>
   ));

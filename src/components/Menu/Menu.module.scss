@@ -16,19 +16,25 @@
 .show ul,
 .hide ul {
   font-family: Neon_R;
-  font-size: 7vh;
+  font-size: 1.7em;
 
   opacity: 0;
 
+  color: $neon-off-color;
+  text-shadow: $neon-text-shadow-off;
+
   margin-right: auto;
-  margin-left: 20vw;
+  margin-left: 15vw;
 
   z-index: inherit;
 
+  transition-duration: 0.3s;
+
   & li {
     cursor: pointer;
+    display: table;
   }
-  & li:hover {
+  & li:not(.active):hover {
     @include neon(1s);
   }
 }
@@ -48,26 +54,36 @@
   background-color: black;
 
   & ul {
-    animation: turn-off-neon 0.3s 0.3s forwards;
+    animation: turn-off-neon 0.3s forwards;
   }
 
-  animation: menu 0.5s 0.3s forwards;
+  animation: menu 0.5s forwards;
 }
 
 @keyframes dark {
   from {
-    opacity: 5;
+    opacity: 1;
     background-color: black;
   }
   to {
-    opacity: 0;
     background-color: black;
+    opacity: 0;
   }
 }
 
 .hide {
   top: -110%;
+  opacity: 0;
 
-  animation: dark 0.5s;
-  transition-delay: 0.5s;
+  & * {
+    opacity: 0;
+    transition-duration: 0.3s;
+  }
+
+  animation: dark 1s ease-out forwards;
+  transition-delay: 1s;
+}
+
+.active {
+  color: $neon-color;
 }
