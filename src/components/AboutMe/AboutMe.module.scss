@@ -1,18 +1,18 @@
-@import '../../styles/utils';
+@import "../../styles/utils";
 
 .title {
   @include neon(1.3s, 0.5s, none);
   color: $neon-color;
   text-shadow: 0 0 10px $neon-color;
   font-size: 1.5em;
-  @include media('<large') {
+  @include media("<large") {
     font-size: 1.2em;
   }
 }
 
 .value {
   font-size: 1.4em;
-  @include media('<large') {
+  @include media("<large") {
     font-size: 1em;
   }
 }
@@ -106,7 +106,7 @@
 
   & li {
     font-size: 1.3em;
-    @include media('<large') {
+    @include media("<large") {
       font-size: 1.2em;
     }
   }

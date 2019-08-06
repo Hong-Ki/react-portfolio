@@ -1,4 +1,4 @@
-@import '../../styles/utils';
+@import "../../styles/utils";
 
 .back {
   @include flex-box();
@@ -22,5 +22,5 @@
     font-weight: 800;
   }
 
-  z-index: z-index('background') !important;
+  z-index: z-index("background") !important;
 }
