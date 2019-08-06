@@ -1,0 +1,40 @@
+@import '../../styles/utils';
+
+.navi {
+  @include flex-box(auto, 35px, row);
+
+  list-style-type: none;
+
+  padding: 0;
+
+  & li {
+    @include flex-box(30px, 30px);
+  }
+
+  & li:before {
+    display: none;
+  }
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  opacity: 0.8;
+  border-radius: 50%;
+
+  border: 3px solid $neon-off-color;
+  box-shadow: 0 0 2px 1px $neon-off-color, inset 0 0 2px 1px $neon-off-color;
+
+  &:not(.active):hover {
+    animation: pulse 0.3s 2;
+  }
+  cursor: pointer;
+}
+
+.active {
+  box-shadow: 0 0 2px 1px $neon-color, inset 0 0 2px 1px $neon-color;
+  border: 3px solid $neon-color;
+  opacity: 1;
+
+  animation: neon-border 0.5s;
+}
