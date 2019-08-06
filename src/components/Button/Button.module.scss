@@ -23,6 +23,7 @@ $duration: 0.2s;
 .close {
   & .bar {
     background: #ffffff00;
+    transition-duration: $duration;
   }
   & div.bar:after {
     top: 0;
