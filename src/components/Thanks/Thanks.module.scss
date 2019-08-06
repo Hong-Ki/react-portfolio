@@ -1,0 +1,15 @@
+@import '../../styles/utils';
+
+.neon {
+  font-size: 2em;
+  color: $neon-color;
+
+  @include neon();
+  font-weight: 300;
+  margin-right: 0.2em;
+}
+
+.message {
+  font-weight: 500;
+  font-size: 1.8em;
+}
