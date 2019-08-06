@@ -1,5 +1,14 @@
 @import '~open-color/open-color';
+@import '~include-media/dist/include-media';
 @import './animations';
+
+$breakpoints: (
+  phone: 500px,
+  small: 690px,
+  medium: 960px,
+  large: 1255px,
+  huge: 2000px,
+);
 
 $full: 100 * 1%;
 $z-index: (
