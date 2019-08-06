@@ -57,27 +57,27 @@ const AboutMe: FC<Props> = ({ current, id }) => {
       <div className={cx('top')}>
         <div className={cx('info')}>
           <div>
-            <span className={cx('subtitle')}>Birth.</span>
+            <span className={cx('title')}>Name.</span>
             <span className={cx('value')}>Hong-Ki Min</span>
           </div>
           <div>
-            <span className={cx('subtitle')}>Mail.</span>
+            <span className={cx('title')}>Birth.</span>
             <span className={cx('value')}>1992. 2. 23</span>
           </div>
           <div>
-            <span className={cx('subtitle')}>Git-bub.</span>
+            <span className={cx('title')}>Mail.</span>
             <span className={cx('value')}>minhk3259@gmail.com</span>
           </div>
         </div>
         <div className={cx('career')}>
-          <span className={cx('subtitle')}>Career.</span>
+          <span className={cx('title')}>Career</span>
           <ul>
             <li>(주)ESE 2016.08.01 - 2018.05.31</li>
           </ul>
         </div>
       </div>
       <div className={cx('bottom')}>
-        <span className={cx('subtitle')}>Skills.</span>
+        <span className={cx('title')}>Skills.</span>
         <div className={cx('skill')}>
           <div className={cx('chart')}>
             <RadarChart
