@@ -8,14 +8,21 @@ const cx = classNames.bind(styles);
 
 interface Props {
   children: ReactNode;
+  current?: string;
   id?: string;
-  current: string;
   backgroundText?: string[];
+  direction?: 'row' | 'column';
 }
 
-const Page: SFC<Props> = ({ children, backgroundText = [], id, current }) => {
+const Page: SFC<Props> = ({
+  children,
+  backgroundText,
+  id,
+  current,
+  direction = 'column',
+}) => {
   return (
-    <section className={cx('page')} id={id}>
+    <section className={cx('page', direction)} id={id}>
       {current === id && children}
       {backgroundText && <BackgroundText texts={backgroundText} />}
     </section>

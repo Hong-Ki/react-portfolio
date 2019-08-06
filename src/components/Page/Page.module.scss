@@ -12,7 +12,15 @@
 .page {
   @include flex-box(100vw, 100vh);
   position: relative;
-  & div {
+
+  & * {
     z-index: z-index('contents');
   }
+}
+
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
 }
