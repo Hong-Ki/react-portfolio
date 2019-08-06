@@ -1,21 +1,29 @@
 @import '../../styles/utils';
 
-.subtitle {
+.title {
   @include neon(1.3s, 0.5s, none);
   color: $neon-color;
   text-shadow: 0 0 10px $neon-color;
+  font-size: 1.5em;
+  @include media('<large') {
+    font-size: 1.2em;
+  }
+}
+
+.value {
+  font-size: 1.4em;
+  @include media('<large') {
+    font-size: 1em;
+  }
 }
 
 .top {
   @include flex-box($full, 40vh, row);
+  margin-top: 10vh;
 }
 
 .bottom {
   @include flex-box($full, 60vh);
-
-  & .subtitle {
-    font-size: 1.5em;
-  }
 
   .skill {
     @include flex-box($full, 80%, row);
@@ -25,12 +33,32 @@
       }
     }
   }
+
+  margin-bottom: 10vh;
 }
 
 .chart,
 .detail {
   @include flex-box(40%, $full);
 }
+
+.chart {
+  align-items: flex-end;
+  & div {
+    /* inline 속성으로 인하여 important사용 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90% !important;
+    height: 100% !important;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 .detail {
   justify-content: flex-start;
   .score {
@@ -52,8 +80,8 @@
       margin-left: 1em;
     }
   }
-  .subtitle {
-    width: 30%;
+  .title {
+    width: 20%;
     text-align: right;
   }
   .value {
@@ -66,15 +94,21 @@
   @include flex-box($full, auto);
   flex-grow: 3;
 
-  .subtitle {
+  .title {
     width: $full;
-    font-size: 1.5em;
     align-items: flex-start;
   }
 
   & ul {
-    width: 90%;
-    margin: 0.2em auto;
+    width: 100%;
+    margin: 0.2em 0px auto;
+  }
+
+  & li {
+    font-size: 1.3em;
+    @include media('<large') {
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -83,8 +117,8 @@
 .arrow {
   @include flex-box(30%, 20%, row);
   position: relative;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
   & svg {
     flex-grow: 1;
@@ -105,6 +139,4 @@
   & svg:nth-child(3) {
     animation-delay: 0.2s;
   }
-
-  //animation: fade-in-right 1s infinite;
 }
