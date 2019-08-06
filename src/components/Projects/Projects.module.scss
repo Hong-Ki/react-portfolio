@@ -1,0 +1,82 @@
+@import '../../styles/utils';
+
+.wrapper {
+  @include flex-box(45vw, 80vh);
+  & > span {
+    color: $neon-color;
+    text-shadow: 0 0 10px $neon-color;
+    font-size: 1.5em;
+
+    @include media('<large') {
+      font-size: 1.3em;
+    }
+  }
+  justify-content: flex-end;
+
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.contents {
+  @include flex-box($full, $full);
+  align-items: flex-start;
+
+  & a {
+    fill: $neon-color;
+
+    display: inline-block;
+    width: 0.7em;
+
+    margin-left: 0.2em;
+
+    &:hover {
+      animation: pulse 0.3s 2;
+    }
+  }
+
+  & span:not(.subtitle) {
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    word-spacing: -0.02em;
+  }
+  & span:not(.subtitle)::before {
+    font-size: 1em;
+    @include media('<large') {
+      font-size: 0.9em;
+    }
+    content: '.';
+    color: $neon-color;
+
+    margin-left: -0.5em;
+    margin-right: 0.3em;
+  }
+
+  & .img {
+    @include flex-box($full, 70%, row);
+
+    flex-wrap: wrap;
+    & img {
+      margin: auto;
+      width: 70%;
+    }
+  }
+}
+.show {
+  animation: fade-in-right 1.5s forwards;
+}
+.hide {
+  opacity: 0;
+}
+
+.subtitle {
+  line-height: 125%;
+  font-size: 1.3em;
+  @include media('<large') {
+    font-size: 1.1em;
+  }
+  color: $neon-color;
+  text-shadow: 0 0 5px $neon-color;
+  margin-top: 0.9rem;
+  margin-bottom: 0.4rem;
+}
