@@ -1,14 +1,15 @@
 import React, { SFC } from 'react';
 
-import { ReactComponent as ReactIcon } from '../../imgs/react.svg';
-import { ReactComponent as JavaIcon } from '../../imgs/java.svg';
-import { ReactComponent as CssIcon } from '../../imgs/css.svg';
-import { ReactComponent as SassIcon } from '../../imgs/sass.svg';
-import { ReactComponent as TypeScriptIcon } from '../../imgs/typescriptlang.svg';
-import { ReactComponent as PosgreSqlIcon } from '../../imgs/postgresql.svg';
-import { ReactComponent as SpringIcon } from '../../imgs/spring.svg';
-import { ReactComponent as JavaScriptIcon } from '../../imgs/javascript.svg';
-import { ReactComponent as LeftArrow } from '../../imgs/left-arrow.svg';
+import { ReactComponent as ReactIcon } from '../../imgs/skill/react.svg';
+import { ReactComponent as JavaIcon } from '../../imgs/skill/java.svg';
+import { ReactComponent as CssIcon } from '../../imgs/skill/css.svg';
+import { ReactComponent as SassIcon } from '../../imgs/skill/sass.svg';
+import { ReactComponent as TypeScriptIcon } from '../../imgs/skill/typescriptlang.svg';
+import { ReactComponent as PosgreSqlIcon } from '../../imgs/skill/postgresql.svg';
+import { ReactComponent as SpringIcon } from '../../imgs/skill/spring.svg';
+import { ReactComponent as JavaScriptIcon } from '../../imgs/skill/javascript.svg';
+
+import { ReactComponent as LeftArrow } from '../../imgs/skill/left-arrow.svg';
 
 import styles from './AboutMe.module.scss';
 import classNames from 'classnames/bind';
@@ -54,8 +55,8 @@ const SkillDetail: SFC<Props> = ({ skillName, score }) => {
             <LeftArrow />
             <LeftArrow />
           </div>
-          <span className={cx('message')}>
-            {"Mouse Over skill's name in the chart!!"}
+          <span className={cx('value')}>
+            {"Put your mouse on the skill's name!"}
           </span>
         </>
       )}
