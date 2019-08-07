@@ -29,4 +29,4 @@
 
 # Page Link
 
-[page]: https://hong-ki.github.io/react-portfolio/
+[My portpolio page](https://hong-ki.github.io/react-portfolio/)
