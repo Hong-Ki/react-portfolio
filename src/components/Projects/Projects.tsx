@@ -5,7 +5,7 @@ import Page from '../Page/Page';
 import Navigator from '../Navigator/Navigator';
 import { CategoryType, Detail } from '../../common/ProjectsData';
 
-import { ReactComponent as Link } from '../../imgs/icons/link.svg';
+import { ReactComponent as Link } from '../../media/icons/link.svg';
 
 const cx = classNames.bind(styles);
 
