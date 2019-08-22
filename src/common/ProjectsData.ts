@@ -1,7 +1,8 @@
-import freeAppBot from '../imgs/project/free-app-bot.png';
-import placefinder from '../imgs/project/placefinder.png';
-import wordbook from '../imgs/project/wordbook.png';
-import todolist from '../imgs/project/todolist.png';
+import freeAppBot from '../media/project/free-app-bot.png';
+import placefinder from '../media/project/placefinder.png';
+import wordbook from '../media/project/wordbook.png';
+import todolist from '../media/project/todolist.png';
+import musicChart from '../media/project/music-chart.png';
 /**
  * Projects Type
  */
@@ -340,6 +341,60 @@ const persnal: CategoryType = [
               {
                 text: 'Git-hub',
                 link: 'https://github.com/Hong-Ki/react-portfolio',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: {
+      title: 'Music Chart',
+      details: [
+        {
+          subtitle: 'Screenshots.',
+          mediaUrls: [musicChart],
+        },
+      ],
+    },
+    contents: [
+      {
+        title: 'This is',
+        details: [
+          {
+            texts: [
+              {
+                text: 'Serverless와 Django, React로 이루어진 프로젝트입니다.',
+              },
+              {
+                text:
+                  'Serverless - Javscript로 작성된 크롤러이며, AWS에 배포합니다. 기본적인 데이터 요청 API를 가지고 있습니다.',
+              },
+              {
+                text:
+                  'Django - grqphQL로 질의 하여 저장된 데이터를 주는 API서버 입니다.',
+              },
+              {
+                text:
+                  'React - TypeScript로 작성되었으며, Front단을 구성하며, SASS로 스타일을 정의하였습니다.',
+              },
+            ],
+          },
+          {
+            subtitle: 'Git-hub',
+            texts: [
+              {
+                text: 'Serverless',
+                link: 'https://github.com/Hong-Ki/sls-music-chart-crawler',
+              },
+              {
+                text: 'Django',
+                link: 'https://github.com/Hong-Ki/django-music-chart-backend',
+              },
+              {
+                text: 'React',
+                link: 'https://github.com/Hong-Ki/react-music-chart-frontend',
               },
             ],
           },
