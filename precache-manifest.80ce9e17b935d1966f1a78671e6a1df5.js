@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d73ed20954024c1b0ca7b57c1045daaf",
+    "revision": "4517aab265032f265ebcd0ce44549c93",
     "url": "/react-portfolio/index.html"
   },
   {
-    "revision": "e7a968234c45296ad7c7",
-    "url": "/react-portfolio/static/css/main.248418a5.chunk.css"
+    "revision": "a8283bb5d643b7661e01",
+    "url": "/react-portfolio/static/css/main.ffed646d.chunk.css"
   },
   {
-    "revision": "724fba2a3e1db5b380c3",
-    "url": "/react-portfolio/static/js/2.866783e8.chunk.js"
+    "revision": "44941c4920688f8855e8",
+    "url": "/react-portfolio/static/js/2.3b314a1d.chunk.js"
   },
   {
-    "revision": "e7a968234c45296ad7c7",
-    "url": "/react-portfolio/static/js/main.441c981c.chunk.js"
+    "revision": "a8283bb5d643b7661e01",
+    "url": "/react-portfolio/static/js/main.99a367ac.chunk.js"
   },
   {
     "revision": "94872cf7e81768d148a3",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portfolio/static/media/TextMeOne-Regular.475b5390.ttf"
   },
   {
-    "revision": "606ea0c8fb99b957844ef7b17154b9e3",
-    "url": "/react-portfolio/static/media/css.606ea0c8.svg"
+    "revision": "248189abce043f3486324d27c82f7c62",
+    "url": "/react-portfolio/static/media/css.248189ab.svg"
   },
   {
     "revision": "104572c28e3cf80fdfc3e0157efaf0a9",
@@ -40,12 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portfolio/static/media/javascript.acb82063.svg"
   },
   {
-    "revision": "6d3c2e50a6ebd417f6a993950dc162a5",
-    "url": "/react-portfolio/static/media/left-arrow.6d3c2e50.svg"
+    "revision": "777ff1215ca60e994d8db60ab0791f15",
+    "url": "/react-portfolio/static/media/left-arrow.777ff121.svg"
   },
   {
     "revision": "bb58371174aca355e486074c959769f8",
     "url": "/react-portfolio/static/media/link.bb583711.svg"
+  },
+  {
+    "revision": "18f666c48387d539116c8c48e47a8fad",
+    "url": "/react-portfolio/static/media/music-chart.18f666c4.png"
   },
   {
     "revision": "fba7016414e32df95b94d45cb3968b6c",
