@@ -37,7 +37,7 @@ const career: CategoryType = [
         {
           subtitle: 'Role.',
           texts: [
-            { text: '풀스택 개발자' },
+            { text: ' 개발자' },
             { text: '솔루션(시설물관리) 개발 및 유지보수' },
           ],
         },
